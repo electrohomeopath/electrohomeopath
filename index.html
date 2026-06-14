@@ -1,132 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electro Homeopathic Treatment - Govind Sahay Khare</title>
-    <style>
-        body {font-family: 'Segoe UI', Tahoma, sans-serif;margin: 0;padding: 0;background-color: #f4f8f7;color: #333;}
-        header{position:relative;color:white;padding:60px 20px;text-align:center}
-        header::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg') no-repeat bottom center/cover;opacity:0.7;z-index:-1}
-        header h1 {font-size: 2.5rem;text-shadow: 2px 2px 4px rgba(0,0,0,0.6);}
-        nav {background-color: #00796b;padding: 12px;text-align: center;}
-        nav a {color: white;margin: 0 15px;text-decoration: none;font-weight: bold;}
-        nav a:hover {text-decoration: underline;}
-        .container {padding: 30px;max-width: 1100px;margin: auto;}
-        h2 {color: #00796b;margin-bottom: 10px;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electro Homeopathic Treatment - Govind Sahay Khare</title>
 
-        
+<style>
+body{font-family:'Segoe UI',Tahoma,sans-serif;margin:0;padding:0;background-color:#f4f8f7;color:#333;}
+header{position:relative;color:white;padding:60px 20px;text-align:center;}
+header::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg') no-repeat bottom center/cover;opacity:.7;z-index:-1;}
+header h1{font-size:2.5rem;text-shadow:2px 2px 4px rgba(0,0,0,.6);}
+nav{background-color:#00796b;padding:12px;text-align:center;}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.container{padding:30px;max-width:1100px;margin:auto;}
+h2{color:#00796b;margin-bottom:10px;}
+.about-main{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+.about-main img{width:300px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);}
+.about-text{flex:1;}
+.about-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px;}
+.about-gallery img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);}
+.treatments{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+.treatments img{width:340px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);}
+.treatments ul{list-style:none;padding:0;columns:2;}
+.treatments ul li{background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Green_check.svg/20px-Green_check.svg.png') no-repeat left center;background-size:16px;padding-left:28px;margin-bottom:8px;}
+.contact-details,.certificate-card{background:white;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1);}
+.certificate-card{text-align:center;}
+.certificate-card img{max-width:100%;width:700px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+footer{background-color:#004d40;color:white;text-align:center;padding:15px;margin-top:20px;}
 
-        .about-main{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;}
-        .about-main img{width:300px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-        .about-text{flex:1;}
-        .about-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px;}
-        .about-gallery img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}@media(max-width:768px){.about-gallery{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){
+.about-gallery{grid-template-columns:repeat(2,1fr);}
+.treatments ul{columns:1;}
+}
+</style>
 
-
-
-        .treatments {display: flex;align-items: flex-start;gap: 20px;flex-wrap: wrap;}
-        .treatments img {border-radius: 8px;max-width: 100%;width: 340px;box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-        .treatments ul {list-style: none;padding: 0;columns: 2;}
-        .treatments ul li {background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Green_check.svg/20px-Green_check.svg.png') no-repeat left center;background-size: 16px;padding-left: 28px;margin-bottom: 8px;}
-        .contact-form {background-color: white;padding: 20px;border-radius: 8px;box-shadow: 0 0 10px rgba(0,0,0,0.1);}
-        input, textarea {width: 100%;padding: 10px;margin: 8px 0;border: 1px solid #ccc;border-radius: 4px;}
-        button {background-color: #00796b;color: white;padding: 10px 15px;border: none;border-radius: 4px;cursor: pointer;}
-        button:hover {background-color: #004d40;}
-        footer {background-color: #004d40;color: white;text-align: center;padding: 15px;margin-top: 20px;}
-    </style>
 </head>
 <body>
-    <header style="text-shadow: 5px 5px 18px black;">
-        <h1>Electro Homeopathic Treatment</h1>
-        <p>By Govind Sahay Khare - Certified Practitioner</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#treatments">Treatments</a>
-        <a href="#contact">Contact</a>
-    </nav>
-<!--     <div class="container" id="about">
-        <h2>About Me</h2>
-        <div class="about" >
-            <img src="./images/mama.jpg?v=1" alt="Govind Sahay Khare" >
-            <p>I am a certified Electro Homeopathy practitioner with years of experience in natural healing methods. My aim is to provide holistic and side-effect-free treatments for various health issues. My practice focuses on understanding the root cause and treating the body naturally for long-term wellness.</p>
-            <img src="images/mama1.jpg?v=1" alt="Govind Sahay Khare" >
-            <img src="images/mama2.jpg?v=1" alt="Govind Sahay Khare" >
-            <img src="images/mama4.jpg?v=1" alt="Govind Sahay Khare" >
-            <img src="images/mama5.jpg?v=1" alt="Govind Sahay Khare" >
-      </div>
-    </div> -->
 
-    <div class="container" id="about">
-        <h2>About Me</h2>
-        <div class="about-main">
-            <img src="./images/mama.jpg?v=1" alt="Govind Sahay Khare">
-            <div class="about-text">
-                <p style="background-color: white;padding: 20px;border-radius: 8px;box-shadow: 0 0 10px rgba(0,0,0,0.1);max-width: 630px;margin: auto;">I am a certified Electro Homeopathy practitioner with years of experience in natural healing methods. My aim is to provide holistic and side-effect-free treatments for various health issues. My practice focuses on understanding the root cause and treating the body naturally for long-term wellness.</p>
-            </div>
-        </div>
-        <div class="about-gallery">
-            <img src="images/mama1.jpg?v=1" alt="Govind Sahay Khare">
-            <img src="images/mama2.jpg?v=1" alt="Govind Sahay Khare">
-            <img src="images/mama5.jpg?v=1" alt="Govind Sahay Khare">
-            <img src="images/mama4.jpg?v=1" alt="Govind Sahay Khare">
-        </div>
-    </div>
-    
-    <div class="container" id="treatments">
-        <h2>Our Treatments</h2>
-        <div class="treatments">
-            <img src="https://images.pexels.com/photos/8376237/pexels-photo-8376237.jpeg"  alt="Electro Homeopathy Treatment Session" style="margin-left: 5%;">
-            <ul>
-                <li>Cancer Support</li>
-                <li>Diabetes Management</li>
-                <li>Blood Pressure Control</li>
-                <li>Cholesterol Management</li>
-                <li>Arthritis & Joint Pain</li>
-                <li>Asthma Control</li>
-                <li>Skin Disorders</li>
-                <li>Migraine & Headache Treatment</li>
-                <li>Digestive Issues</li>
-                <li>Respiratory Problems</li>
-                <li>Thyroid Disorder Support</li>
-                <li>Stress & Anxiety Reduction</li>
-                <li>Insomnia & Sleep Disorders</li>
-                <li>Allergy Relief</li>
-                <li>Weight Management</li>
-                <li>Hair Loss & Dandruff</li>
-                <li>Back Pain Relief</li>
-                <li>Menstrual Disorders</li>
-                <li>Menopause Support</li>
-                <li>Kidney Stone Relief</li>
-                <li>Liver Support</li>
-                <li>Varicose Veins</li>
-                <li>Cold & Flu Treatment</li>
-                <li>Gastric Problems</li>
-                <li>Boosting Energy Levels</li>
-                <li>Improving Concentration</li>
-                <li>Detoxification Therapy</li>
-                <li>Hormonal Imbalance</li>
-                <li>Post-Surgery Recovery</li>
-                <li>Dental & Gum Care</li>
-                <li>Immune System Support</li>
-                <li>Chronic Pain Relief</li>
-            </ul>
-        </div>
-    </div>
-    <div class="container" id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-details" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 600px; margin: left;">
-        <p><strong>Name:</strong> Govind Sahay Khare</p>
-        <p><strong>Qualification:</strong> Certified Electro Homeopathy Practitioner</p>
-        <p><strong>Address:</strong> Near Nirmal Jyoti School, Bina</p>
-        <p><strong>Phone:</strong> +91-9131639826</p>
-        <p><strong>Email:</strong> <a href="mailto:govindkhare1@gmail.com">govindkhare1@gmail.com</a> | <a href="mailto:electrohomeopath.20@gmail.com">electrohomeopath.20@gmail.com</a></p>
-    </div>
+<header style="text-shadow:5px 5px 18px black;">
+<h1>Electro Homeopathic Treatment</h1>
+<p>By Govind Sahay Khare - Certified Practitioner</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#certificate">Certificate</a>
+<a href="#treatments">Treatments</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="about">
+<h2>About Me</h2>
+
+<div class="about-main">
+<img src="./images/mama.jpg?v=1" alt="Govind Sahay Khare">
+
+<div class="about-text">
+<p>
+I am a certified Electro Homeopathy practitioner with years of experience in natural healing methods. My aim is to provide holistic and side-effect-free treatments for various health issues. My practice focuses on understanding the root cause and treating the body naturally for long-term wellness.
+</p>
+</div>
 </div>
 
-    <footer>
-        <p>&copy; 2025 | Govind Sahay Khare - Electro Homeopathy Practitioner | All Rights Reserved</p>
-    </footer>
+<div class="about-gallery">
+<img src="images/mama1.jpg?v=1" alt="Govind Sahay Khare">
+<img src="images/mama2.jpg?v=1" alt="Govind Sahay Khare">
+<img src="images/mama1.jpg?v=1" alt="Govind Sahay Khare">
+<img src="images/mama2.jpg?v=1" alt="Govind Sahay Khare">
+</div>
+
+</div>
+
+<div class="container" id="certificate">
+<h2>Educational Qualification & Certificate</h2>
+
+<div class="certificate-card">
+<h3>Electro Homeopathy Certificate</h3>
+<p>Certified Electro Homeopathy Practitioner</p>
+<img src="images/marksheet.jpg?v=1" alt="Electro Homeopathy Certificate">
+</div>
+
+</div>
+
+<div class="container" id="treatments">
+<h2>Our Treatments</h2>
+
+<div class="treatments">
+
+<img src="https://images.pexels.com/photos/8376237/pexels-photo-8376237.jpeg" alt="Electro Homeopathy Treatment Session">
+
+<ul>
+<li>Cancer Support</li>
+<li>Diabetes Management</li>
+<li>Blood Pressure Control</li>
+<li>Cholesterol Management</li>
+<li>Arthritis & Joint Pain</li>
+<li>Asthma Control</li>
+<li>Skin Disorders</li>
+<li>Migraine & Headache Treatment</li>
+<li>Digestive Issues</li>
+<li>Respiratory Problems</li>
+<li>Thyroid Disorder Support</li>
+<li>Stress & Anxiety Reduction</li>
+<li>Insomnia & Sleep Disorders</li>
+<li>Allergy Relief</li>
+<li>Weight Management</li>
+<li>Hair Loss & Dandruff</li>
+<li>Back Pain Relief</li>
+<li>Menstrual Disorders</li>
+<li>Menopause Support</li>
+<li>Kidney Stone Relief</li>
+<li>Liver Support</li>
+<li>Varicose Veins</li>
+<li>Cold & Flu Treatment</li>
+<li>Gastric Problems</li>
+<li>Boosting Energy Levels</li>
+<li>Improving Concentration</li>
+<li>Detoxification Therapy</li>
+<li>Hormonal Imbalance</li>
+<li>Post-Surgery Recovery</li>
+<li>Dental & Gum Care</li>
+<li>Immune System Support</li>
+<li>Chronic Pain Relief</li>
+</ul>
+
+</div>
+</div>
+
+<div class="container" id="contact">
+
+<h2>Contact Me</h2>
+
+<div class="contact-details">
+<p><strong>Name:</strong> Govind Sahay Khare</p>
+<p><strong>Qualification:</strong> Certified Electro Homeopathy Practitioner</p>
+<p><strong>Address:</strong> Near Nirmal Jyoti School, Bina, Madhya Pradesh</p>
+<p><strong>Phone:</strong> +91-9131639826</p>
+<p><strong>Email:</strong>
+<a href="mailto:govindkhare1@gmail.com">govindkhare1@gmail.com</a> |
+<a href="mailto:electrohomeopath.20@gmail.com">electrohomeopath.20@gmail.com</a>
+</p>
+</div>
+
+</div>
+
+<footer>
+<p>&copy; 2025 | Govind Sahay Khare - Electro Homeopathy Practitioner | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
